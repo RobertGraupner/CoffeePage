@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Coffee Shop</title>
@@ -38,33 +38,129 @@
     </div>
   </header>
 
-  <section class="product">
+  <div id="pages">
+    <div id="home-page">
+      <div class="home-wrapper container">
+        <div class="row">
+          <h2 class="product-title">PRODUCTS</h2>
+          <p class="title-underline"></p>
+        </div>
+        <div class="products-list"></div>
 
-  </section>
-
-  <section class="contact">
-
-  </section>
-
-  <section class="about">
-    <div class="background-image">
-      <img src="./images/about-us.jpg" alt="about us">
-    </div>
-    <div class="container">
-      <div class="title">
-        <h2 class="about">ABOUT US</h2>
-      </div>
-      <div class="description">
-        <p>Who are we? Just a bunch of friends with<br>a love for a good coffee and desire to create<br>something new,
+        <script id="template-home-widget" type="text/x-handlebars-template">
+          <div class="product-widget container">
+            <div class="product">
+              <div class="product-image">
+                {{{ images }}}
+              </div>
+              <div class="product-description">
+                <h3 class="name">{{{ number }}} {{{ name }}}</h3>
+                <div class="row">
+                  <p class="underline-product-name"></p>
+                  <span class="product-details">{{{ description }}}</span>
+                </div>
+                <div class="row">
+                  <div class="product-characteristic">
+                    <p>roasting: <span>{{{ roasting }}}</span></p>
+                    <p>intensity: <span>{{{ intensity }}}</span></p>
+                  </div>
+                  <div class="icon">
+                    {{{ most-popular }}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </script>
+        
+        <section class="about">
+          <div class="background-image">
+            <img src="./images/about-us.jpg" alt="about us">
+          </div>
+          <div class="container">
+            <div class="title">
+              <h2 class="about-us">ABOUT US</h2>
+            </div>
+            <div class="description">
+              <p>Who are we? Just a bunch of friends with<br>a love for a good coffee and desire to create<br>something new,
               something original.<br><br>Our coffees reflect us – young, wild and free.<br>We are on the journey of new tastes...</p>
-        <h3 class="join">Join us</h3>
+              <h3 class="join">Join us</h3>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <p>&copy; 2021 EL TIGRE inc.</p>
+        </footer>
       </div>
     </div>
-  </section>
 
-  <footer class="footer">
-    <p>&copy; 2021 EL TIGRE inc.</p>
-  </footer>
+    <section id="contact">
+      <div class="contact-wrapper container">
+        <div class="contact-widget">
+          <div class="section-title">
+            <h2>CONTACT US</h2>
+            <p class="title-underline"></p>
+          </div>
+          <form>
+            <div class="contact-form">
+              <label for="filed-name">NAME</label>
+              <input type="text">
+            </div>
+            <div class="contact-form">
+              <label for="filed-name">TITLE</label>
+              <input type="text">
+            </div>
+            <div class="contact-form">
+              <label for="field-message">MESSAGE</label>
+              <textarea></textarea>
+            </div>
+            <div class="contact-form">
+              <input type="submit" value="SUBMIT">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="products-wrapper container">
+        <div class="product-title">
+          <h2>PRODUCTS</h2>
+          <p class="title-underline"></p>
+        </div>
+        <div class="products-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PRODUCT TEMPLATE -->
+  <script id="template-product-widget" type="text/x-handlebars-template">
+    <div class="product-widget container">
+      <div class="product">
+        <div class="product-image">
+          {{{ images }}}
+        </div>
+        <div class="product-description">
+          <h3 class="name">{{{ number }}} {{{ name }}}</h3>
+          <div class="row">
+            <p class="underline-product-name"></p>
+            <span class="poduct-details">{{{ description }}}</span>
+          </div>
+          <div class="row">
+            <div class="product-characteristic">
+              <p>roasting: <span>{{{ roasting }}}</span></p>
+              <p>intensity: <span>{{{ intensity }}}</span></p>
+            </div>
+            <div class="icon">
+              {{{ most-popular }}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 </html>
