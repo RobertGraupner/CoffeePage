@@ -39,39 +39,13 @@
   </header>
 
   <div id="pages">
-    <div id="home-page">
+    <section id="home">
       <div class="home-wrapper container">
         <div class="row">
           <h2 class="product-title">PRODUCTS</h2>
           <p class="title-underline"></p>
         </div>
-        <div class="products-list"></div>
-
-        <script id="template-home-widget" type="text/x-handlebars-template">
-          <div class="product-widget container">
-            <div class="product">
-              <div class="product-image">
-                {{{ images }}}
-              </div>
-              <div class="product-description">
-                <h3 class="name">{{{ number }}} {{{ name }}}</h3>
-                <div class="row">
-                  <p class="underline-product-name"></p>
-                  <span class="product-details">{{{ description }}}</span>
-                </div>
-                <div class="row">
-                  <div class="product-characteristic">
-                    <p>roasting: <span>{{{ roasting }}}</span></p>
-                    <p>intensity: <span>{{{ intensity }}}</span></p>
-                  </div>
-                  <div class="icon">
-                    {{{ most-popular }}}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </script>
+        <div class="products-list-home"></div>
 
         <section class="about">
           <div class="background-image">
@@ -88,11 +62,12 @@
             </div>
           </div>
         </section>
+
         <footer class="footer">
           <p>&copy; 2021 EL TIGRE inc.</p>
         </footer>
       </div>
-    </div>
+    </section>
 
     <section id="contact">
       <div class="contact-wrapper container">

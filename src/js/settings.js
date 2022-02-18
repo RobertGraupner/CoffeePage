@@ -1,6 +1,5 @@
 export const select = {
   templateOf: {
-    homeWidget: '#template-home-widget',
     productWidget: '#template-product-widget',
   },
   containerOf: {
@@ -11,6 +10,7 @@ export const select = {
   },
   product: {
     productList: '.products-list',
+    productListHome: '.products-list-home',
   },
   nav: {
     links: '.nav a',
@@ -35,5 +35,4 @@ export const settings = {
 
 export const templates = {
   productWidget: Handlebars.compile(document.querySelector(select.templateOf.productWidget).innerHTML),
-  homeWidget: Handlebars.compile(document.querySelector(select.templateOf.homeWidget).innerHTML),
 };

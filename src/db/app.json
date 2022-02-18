@@ -1,1 +1,37 @@
-{}
+{
+  "products":[
+    {
+      "number": "01.",
+      "name": "LA LAGARTIJA",
+      "roasting": "5/10",
+      "intensity": "6/10",
+      "description": "Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavor.",
+      "most-popular": [
+        "<img src=\"images/most-popular.png\">"
+      ],
+      "images": [
+        "<img src=\"/images/coffee-1.png\">"
+      ]
+    },
+    {
+      "number": "02.",
+      "name": "EL TIGRE",
+      "roasting": "8/10",
+      "intensity": "9/10",
+      "description": "Really dark coffee, only for the real gourmets. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with caramel.",
+      "images": [
+        "<img src=\"images/coffee-2.png\">"
+      ]
+    },
+    {
+      "number": "03.",
+      "name": "LA CUCARACHA",
+      "roasting": "3/10",
+      "intensity": "7/10",
+      "description": "Sweet and intense with a big amount of different flavors. Caramel, grapes, strwaberry, you name it! It's great choice for warm summer days.",
+      "images": [
+        "<img src=\"images/coffee-3.png\">"
+      ]
+    }
+  ]
+}
