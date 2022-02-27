@@ -1,0 +1,54 @@
+.contact-title {
+  color: $color-gold;
+  padding-top: 30px;
+  word-spacing: 10px;
+  letter-spacing: 18px;
+  font-size: $base-size * 3.5;
+  font-weight: $font-bold;
+  text-align: center;
+  margin-bottom: 50px;
+  &::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    width: 750px;
+    height: 6px;
+    transform: translateX(-50%);
+    background: $color-gold;
+  }
+}
+
+.contact-form {
+  @include flex(column, center, center);
+  color: $color-dark;
+  font-weight: $font-bold;
+  letter-spacing: 7px;
+  font-size: $base-size * 2;
+  //padding: 10px 0;
+}
+
+input {
+  width: 500px;
+  height: 75px;
+  border: 3px solid $color-dark;
+  margin: 20px 0;
+}
+
+textarea {
+  width: 500px;
+  height: 150px;
+  border: 3px solid $color-dark;
+  margin: 20px 0;
+}
+
+.btn {
+  width: 250px;
+  height: 80px;
+  color: $color-light;
+  font-weight: $font-bold;
+  letter-spacing: 7px;
+  background-color: $color-gold;
+  border: none;
+  margin: 30px 0;
+  margin-bottom: 100px;
+}

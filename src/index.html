@@ -12,9 +12,6 @@
 </head>
 <body>
   <header class="header">
-    <div class="background-image">
-      <img class="img" src="./images/background.png" alt="coffee bag">
-    </div>
     <div class="container">
       <nav class="navigation">
         <div class="row">
@@ -40,77 +37,67 @@
 
   <div id="pages">
     <section id="home">
-      <div class="home-wrapper container">
-        <div class="row">
-          <h2 class="product-title">PRODUCTS</h2>
-          <p class="title-underline"></p>
+      <div class="home-wrapper">
+        <div class="product-title">
+          <h2>PRODUCTS</h2>
         </div>
-        <div class="products-list-home"></div>
+        <div class="products-list-home container"></div>
 
         <section class="about">
-          <div class="background-image">
-            <img src="./images/about-us.jpg" alt="about us">
+          <div class="title">
+            <h2 class="about-us">ABOUT US</h2>
           </div>
-          <div class="container">
-            <div class="title">
-              <h2 class="about-us">ABOUT US</h2>
-            </div>
-            <div class="description">
-              <p>Who are we? Just a bunch of friends with<br>a love for a good coffee and desire to create<br>something new,
+          <div class="description">
+            <p>Who are we? Just a bunch of friends with<br>a love for a good coffee and desire to create<br>something new,
               something original.<br><br>Our coffees reflect us – young, wild and free.<br>We are on the journey of new tastes...</p>
-              <h3 class="join">Join us</h3>
-            </div>
+            <h3 class="join">Join us!</h3>
           </div>
         </section>
-
-        <footer class="footer">
-          <p>&copy; 2021 EL TIGRE inc.</p>
-        </footer>
       </div>
     </section>
 
     <section id="contact">
       <div class="contact-wrapper container">
-        <div class="contact-widget">
-          <div class="section-title">
-            <h2>CONTACT US</h2>
-            <p class="title-underline"></p>
-          </div>
-          <form>
-            <div class="contact-form">
-              <label for="filed-name">NAME</label>
-              <input type="text">
-            </div>
-            <div class="contact-form">
-              <label for="filed-name">TITLE</label>
-              <input type="text">
-            </div>
-            <div class="contact-form">
-              <label for="field-message">MESSAGE</label>
-              <textarea></textarea>
-            </div>
-            <div class="contact-form">
-              <button type="submit" class="btn">SUBMIT</button>
-            </div>
-          </form>
+        <div class="contact-title">
+          <h2>CONTACT US</h2>
         </div>
+        <form>
+          <div class="contact-form">
+            <label for="filed-name">NAME</label>
+            <input type="text">
+          </div>
+          <div class="contact-form">
+            <label for="filed-name">TITLE</label>
+            <input type="text">
+          </div>
+          <div class="contact-form">
+            <label for="field-message">MESSAGE</label>
+            <textarea></textarea>
+          </div>
+          <div class="contact-form">
+            <button type="submit" class="btn">SUBMIT</button>
+          </div>
+        </form>
       </div>
     </section>
 
     <section id="products">
-      <div class="products-wrapper container">
+      <div class="products-wrapper">
         <div class="product-title">
           <h2>PRODUCTS</h2>
-          <p class="title-underline"></p>
         </div>
-        <div class="products-list"></div>
+        <div class="products-list container"></div>
       </div>
     </section>
   </div>
 
+  <footer class="footer">
+    <p>&copy; 2021 EL TIGRE inc.</p>
+  </footer>
+
   <!-- PRODUCT TEMPLATE -->
   <script id="template-product-widget" type="text/x-handlebars-template">
-    <div class="product-widget container">
+    <div class="product-widget">
       <div class="product">
         <div class="product-image">
           {{{ images }}}

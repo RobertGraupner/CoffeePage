@@ -1,0 +1,29 @@
+.product-title {
+  color: $color-gold;
+  padding-top: 40px;
+  word-spacing: 10px;
+  letter-spacing: 18px;
+  font-size: $base-size * 3.5;
+  font-weight: $font-regular;
+  text-align: center;
+  margin-bottom: 50px;
+  &::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    width: 750px;
+    height: 6px;
+    transform: translateX(-50%);
+    background: $color-gold;
+  }
+}
+
+.product {
+  @include flex (row-reverse, center, center);
+  margin: 50px 0;
+  padding: 0;
+}
+
+.product:nth-child(even) {
+  @include flex (row, center, center);
+}
