@@ -7,6 +7,7 @@
   font-weight: $font-regular;
   text-align: center;
   margin-bottom: 50px;
+
   &::after{
     position: absolute;
     content: '';
@@ -18,12 +19,65 @@
   }
 }
 
-.product {
+.product-widget .product {
   @include flex (row-reverse, center, center);
-  margin: 50px 0;
-  padding: 0;
+  margin: 75px 0;
+  img {
+    position: relative;
+    left: 100px;
+  }
 }
 
-.product:nth-child(even) {
+.product-widget:nth-child(even) .product {
   @include flex (row, center, center);
+  img {
+    position: relative;
+    left: -100px;
+  }
+}
+
+.name {
+  font-weight: $font-bold;
+  font-size: $base-size * 3.5;
+  letter-spacing: 5px;
+  color: $color-dark;
+}
+
+.underline-product-name {
+  position: relative;
+  content: '';
+  left: 10px;
+  top: 15px;
+  width: 100px;
+  height: 4px;
+  background: $color-gold;
+}
+
+.product-details {
+position: relative;
+left: 150px;
+letter-spacing: 1px;
+opacity: 70%;
+}
+
+.product-characteristic {
+  font-size: $base-size + 6;
+  font-weight: $font-bold;
+  letter-spacing: 3px;
+  color: $color-dark;
+  text-transform: uppercase;
+  padding-top: 30px;
+  span {
+    color: $color-gold;
+  }
+}
+
+.product-image img {
+  box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.3), 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  position: relative;
+  left: 150px;
+  top: -70px;
 }
