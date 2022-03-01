@@ -8,10 +8,10 @@ class Product {
     thisProduct.id = id;
     thisProduct.data = data;
 
-    thisProduct.renderInMenu();
+    thisProduct.renderInPage();
   }
 
-  renderInMenu() {
+  renderInPage() {
     const thisProduct = this;
     /* generate HTML based on template */
     const generatedHTML = templates.productWidget(thisProduct.data);

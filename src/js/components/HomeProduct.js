@@ -8,10 +8,10 @@ class HomeProduct {
     thisHome.id = id;
     thisHome.data = data;
 
-    thisHome.renderInMenuHome();
+    thisHome.renderInPageHome();
   }
 
-  renderInMenuHome() {
+  renderInPageHome() {
     const thisHome = this;
     /* generate HTML based on template */
     const generatedHTML = templates.productWidget(thisHome.data);

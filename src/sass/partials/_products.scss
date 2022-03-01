@@ -22,6 +22,7 @@
 .product-widget .product {
   @include flex (row-reverse, center, center);
   margin: 75px 0;
+
   img {
     position: relative;
     left: 100px;
@@ -30,6 +31,7 @@
 
 .product-widget:nth-child(even) .product {
   @include flex (row, center, center);
+
   img {
     position: relative;
     left: -100px;
@@ -54,10 +56,10 @@
 }
 
 .product-details {
-position: relative;
-left: 150px;
-letter-spacing: 1px;
-opacity: 70%;
+  position: relative;
+  left: 150px;
+  letter-spacing: 1px;
+  opacity: 70%;
 }
 
 .product-characteristic {
@@ -67,6 +69,7 @@ opacity: 70%;
   color: $color-dark;
   text-transform: uppercase;
   padding-top: 30px;
+
   span {
     color: $color-gold;
   }

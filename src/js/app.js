@@ -64,7 +64,7 @@ const app = {
         this.data.products = parsedResponse;
         /* execute method */
         thisApp.initHomeProduct();
-        thisApp.initMenu();
+        thisApp.initProduct();
       });
   },
 
@@ -77,7 +77,7 @@ const app = {
     }
   },
 
-  initMenu: function () {
+  initProduct: function () {
     const thisApp = this;
 
     for (let productData in thisApp.data.products) {

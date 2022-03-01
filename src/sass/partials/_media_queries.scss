@@ -1,0 +1,284 @@
+@media (max-width: 1280px) {
+  /* Header */
+
+  .header {
+    height: 800px;
+  }
+  .company-title {
+    font-size: $base-size + 16;
+    padding-left: 10%;
+  }
+  .company-subtitle {
+    font-size: $base-size;
+    padding-left: 10%;
+  }
+  
+  .header-title {
+    font-size: $base-size * 2.5;
+    padding-top: 100px;
+    &::after{
+      height: 4px;
+    }
+    .upper-title {
+      margin-bottom: 0px;
+      padding-right: 0;
+    }
+    .lower-title {
+      padding-left: 0;
+    }
+  }
+
+  .header-icon {
+  font-size: $base-size * 2;
+    i {
+      top: 80px;
+      font-size: $base-size * 2.5;
+    }
+  }
+
+  /* Products */
+
+  .product-title {
+    padding-top: 20px;
+    font-size: $base-size * 2.5;
+    margin-bottom: 50px;
+    &::after {
+      width: 450px;
+      height: 4px;
+    }
+  }
+
+  .product-widget .product {
+    margin: 50px 0;
+    img {
+      left: 20px;
+    }
+  }
+
+  .product-widget:nth-child(even) .product {
+    img {
+      left: -20px;
+    }
+  }
+
+  .name {
+    font-size: $base-size * 2.5;
+  }
+
+  .underline-product-name {
+    width: 0px;
+    height: 0px;
+  }
+
+  .product-details {
+    left: 0px;
+  }
+
+  .product-characteristic {
+    font-size: $base-size + 4;
+  }
+
+  .icon {
+    left: 160px;
+    top: -30px;
+  }
+
+  /* About */
+
+  .title {
+    font-size: $base-size * 2.5;
+    &::after {
+      width: 400px;
+      height: 4px;
+   }
+  }
+
+  .about {
+    height: 600px;
+  }
+
+  .description {
+    text-align: center;
+    font-size: $base-size * 2;
+    left: 0px;
+    .join {
+      left: 150px;
+   }
+  }
+
+  /* Contact */
+
+  .contact-title {
+    font-size: $base-size * 2.5;
+    margin-bottom: 50px;
+    &::after{
+      width: 500px;
+      height: 4px;
+    }
+  }
+
+  .contact-form {
+    font-size: $base-size * 2;
+  }
+
+  input {
+    width: 400px;
+    height: 60px;
+    margin: 10px 0;
+  }
+
+  textarea {
+    width: 400px;
+    height: 120px;
+    margin: 10px 0;
+  }
+
+  .btn {
+    width: 200px;
+    height: 60px;
+    margin-bottom: 30px;
+  }
+
+  /* Footer */
+
+  .footer {
+    padding: 20px 0;
+  }
+}
+  
+@media (max-width: 1024px) {
+
+  /* Header */
+
+  .nav {
+    right: 2%;
+  }
+
+  .header-icon {
+    font-size: $base-size * 1.8;
+    margin-top: 400px;
+    i {
+      font-size: $base-size * 2;
+    }
+  }
+
+  /* Products */
+
+  .product-widget .product {
+    @include flex (column-reverse, center, center);
+    margin: 20px 0;
+    img {
+      left: 0px;
+    }
+  }
+  .product-widget:nth-child(even) .product {
+    @include flex (column-reverse, center, center);
+    img {
+      left: 0px;
+    }
+  }
+
+  .product-title {
+    margin-bottom: 30px;
+  }
+
+  .product-characteristic {
+  padding-top: 10px;
+  text-align: center;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  /* About */
+
+  .description {
+    .join {
+      left: 50px;
+   }
+  }
+}
+  
+@media (max-width: 769px) {
+
+  /* Header */
+
+  .company-title {
+    font-size: $base-size + 14;
+    padding-left: 5%;
+  }
+  .company-subtitle {
+    display: none;
+  }
+
+  .nav {
+    @include flex(column, flex-end, center);
+    width: 110px;
+    top: 5px;
+  
+    .header-icon {
+      margin-top: 400px;
+    }
+  }
+
+  .header-title {
+    font-size: $base-size * 2;
+    letter-spacing: 10px;
+  }
+
+  /* Products */
+
+  .product-title {
+    font-size: $base-size * 2;
+    letter-spacing: 10px;
+    &::after{
+      width: 350px;
+    }
+  }
+
+  .product-widget .product {
+    @include flex (column-reverse, center, center);
+    margin: 20px 0;
+    img {
+      width: 414px;
+      height: 288px;
+    }
+  }
+
+  /* About */
+
+  .title {
+    font-size: $base-size * 2;
+    padding-top: 20px;
+    &::after {
+      width: 400px;
+      height: 3px;
+   }
+  }
+
+  .about {
+    height: 500px;
+  }
+
+  .description {
+    text-align: center;
+    font-size: $base-size * 1.5;
+    top: 50px;
+    .join {
+      left: 0;
+      top: 40px;
+    }
+  }
+
+  /* Contact */
+
+  .contact-title {
+    font-size: $base-size * 2;
+    letter-spacing: 10px;
+    &::after{
+      width: 400px;
+      height: 3px;
+    }
+  }
+}
