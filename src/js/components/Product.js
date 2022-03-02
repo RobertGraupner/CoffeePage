@@ -1,12 +1,15 @@
-import { templates, select } from '../settings.js';
+import { templates } from '../settings.js';
 import { utils } from '../utils.js';
 
 class Product {
-  constructor(id, data) {
+  constructor(id, data, element) {
     const thisProduct = this;
 
     thisProduct.id = id;
     thisProduct.data = data;
+
+    thisProduct.dom = {};
+    thisProduct.dom.element = element;
 
     thisProduct.renderInPage();
   }
@@ -17,10 +20,8 @@ class Product {
     const generatedHTML = templates.productWidget(thisProduct.data);
     /* create element using utils.createElementFromHTML */
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
-    /* find menu container */
-    const menuContainer = document.querySelector(select.product.productList);
-    /* add element to menu */
-    menuContainer.appendChild(thisProduct.element);
+    /* add element to container */
+    thisProduct.dom.element.appendChild(thisProduct.element);
   }
 }
 

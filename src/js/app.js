@@ -1,6 +1,5 @@
 import { classNames, select, settings } from './settings.js';
 import Product from './components/Product.js';
-import HomeProduct from './components/HomeProduct.js';
 
 const app = {
   initPages: function () {
@@ -67,22 +66,24 @@ const app = {
         thisApp.initProduct();
       });
   },
-
+  
   initHomeProduct: function () {
     const thisApp = this;
+    const elementDOM = document.querySelector(select.product.productListHome);
 
     for (let productData in thisApp.data.products) {
       /* zmieniamy klucz na właściwość id, żeby działało z serwerem */
-      new HomeProduct(thisApp.data.products[productData].id,thisApp.data.products[productData]);
+      new Product(thisApp.data.products[productData].id,thisApp.data.products[productData], elementDOM);
     }
   },
 
   initProduct: function () {
     const thisApp = this;
+    const elementDOM = document.querySelector(select.product.productList);
 
     for (let productData in thisApp.data.products) {
       /* zmieniamy klucz na właściwość id, żeby działało z serwerem */
-      new Product(thisApp.data.products[productData].id,thisApp.data.products[productData]);
+      new Product(thisApp.data.products[productData].id,thisApp.data.products[productData], elementDOM);
     }
   },
 
